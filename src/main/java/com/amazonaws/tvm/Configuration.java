@@ -32,12 +32,14 @@ public class Configuration {
 	/**
 	 * The AWS Access Key Id for the AWS account from which to generate sessions.
 	 */
-	public static final String AWS_ACCESS_KEY_ID = System.getProperty( "AWS_ACCESS_KEY_ID" );
-
+	//public static final String AWS_ACCESS_KEY_ID = System.getProperty( "AWS_ACCESS_KEY_ID" );
+	public static String AWS_ACCESS_KEY_ID = "";
+	
     /**
      * The AWS Secret Key for the AWS account from which to generate sessions.
      */
-	public static final String AWS_SECRET_KEY = System.getProperty( "AWS_SECRET_KEY" );
+	//public static final String AWS_SECRET_KEY = System.getProperty( "AWS_SECRET_KEY" );
+	public static String AWS_SECRET_KEY = "";
 	
 	/**
 	 * The AWS Account Id for the AWS account from which to generate sessions.
@@ -105,5 +107,23 @@ public class Configuration {
 			return null;
 		}
 	}
+
+	// Mark Prichard: Added getter/setter methods for AWS Credentials
+	public static String getAwsAccessKeyId() {
+		return AWS_ACCESS_KEY_ID;
+	}
+
+	public static void setAwsAccessKeyId(String awsAccessKeyId) {
+		AWS_ACCESS_KEY_ID = awsAccessKeyId;
+	}
+
+	public static String getAwsSecretKey() {
+		return AWS_SECRET_KEY;
+	}
+
+	public static void setAwsSecretKey(String awsSecretKey) {
+		AWS_SECRET_KEY = awsSecretKey;
+	}
+	
 	
 }
