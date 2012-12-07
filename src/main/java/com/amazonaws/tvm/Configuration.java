@@ -34,9 +34,9 @@ public class Configuration {
 	 */
 	public static final String AWS_ACCESS_KEY_ID = System.getProperty( "AWS_ACCESS_KEY_ID" );
 	
-    /**
-     * The AWS Secret Key for the AWS account from which to generate sessions.
-     */
+	/**
+	 * The AWS Secret Key for the AWS account from which to generate sessions.
+	 */
 	public static final String AWS_SECRET_KEY = System.getProperty( "AWS_SECRET_KEY" );
 	
 	/**
