@@ -19,8 +19,8 @@
 <%@ page session="true" %>
 
 <%
-	Configuration.setAwsAccessKeyId(getServletConfig().getInitParameter(awsAccessKey));
-	Configuration.setAwsSecretKey(getServletConfig().getInitParameter(awsSecretKey));
+	Configuration.setAwsAccessKeyId(getServletConfig().getInitParameter("awsAccessKey"));
+	Configuration.setAwsSecretKey(getServletConfig().getInitParameter("awsSecretKey"));
 %>
 
 <html>
