@@ -1,0 +1,22 @@
+
+    "id": "cb-tvm-identity",
+    "name": "CloudBees Identity TVM for AWS",
+    "source": "https://github.com/mqprichard/cb-tvm-identity.git",
+    "description" : "The Amazon Web Services Idnetity Token Vending Machine (TVM) sample application for the CloudBees PaaS",
+    "doc-url" : "https://github.com/mqprichard/cb-tvm-identity/blob/master/README.md",
+    "icon" : "https://d3ko533tu1ozfq.cloudfront.net/clickstart/sencha_icon.png",
+    "app-package-type": "war",
+    "order" : 1,
+
+    "runtime": {
+        "type": "tomcat"
+    },
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven",
+            "options": {
+            }
+        }
+    }
+}
+
