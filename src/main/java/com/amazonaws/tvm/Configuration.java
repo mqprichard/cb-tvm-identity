@@ -70,7 +70,7 @@ public class Configuration {
 	public static final String USERS_DOMAIN = getUsersDomain();
 	
 	/**
-	 * The name of the SimpleDB Domain used to store device info if using the custome authentication mechanisms.
+	 * The name of the SimpleDB Domain used to store device info if using the custom authentication mechanisms.
 	 */
 	public static final String DEVICE_DOMAIN = getDeviceDomain();
 	

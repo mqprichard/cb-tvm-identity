@@ -1,0 +1,118 @@
+<maven2-moduleset>
+	<actions />
+	<description />
+	<logRotator>
+		<daysToKeep>60</daysToKeep>
+		<numToKeep>-1</numToKeep>
+		<artifactDaysToKeep>-1</artifactDaysToKeep>
+		<artifactNumToKeep>20</artifactNumToKeep>
+	</logRotator>
+	<keepDependencies>false</keepDependencies>
+	<properties>
+		<nectar.plugins.rbac.groups.JobProxyGroupContainer>
+			<groups />
+		</nectar.plugins.rbac.groups.JobProxyGroupContainer>
+		<com.cloudbees.jenkins.plugins.PublicKey />
+		<com.cloudbees.plugins.deployer.DeployNowJobProperty>
+			<oneClickDeploy>false</oneClickDeploy>
+			<configuration>
+				<user>(jenkins)</user>
+				<account>${account}</account>
+				<deployables />
+			</configuration>
+		</com.cloudbees.plugins.deployer.DeployNowJobProperty>
+	</properties>
+	<scm class="hudson.plugins.git.GitSCM">
+		<configVersion>2</configVersion>
+		<userRemoteConfigs>
+			<hudson.plugins.git.UserRemoteConfig>
+				<name />
+				<refspec />
+				<url>${repositoryUrl}</url>
+			</hudson.plugins.git.UserRemoteConfig>
+		</userRemoteConfigs>
+		<branches>
+			<hudson.plugins.git.BranchSpec>
+				<name>**</name>
+			</hudson.plugins.git.BranchSpec>
+		</branches>
+		<disableSubmodules>false</disableSubmodules>
+		<recursiveSubmodules>false</recursiveSubmodules>
+		<doGenerateSubmoduleConfigurations>false
+		</doGenerateSubmoduleConfigurations>
+		<authorOrCommitter>false</authorOrCommitter>
+		<clean>false</clean>
+		<wipeOutWorkspace>false</wipeOutWorkspace>
+		<pruneBranches>false</pruneBranches>
+		<remotePoll>false</remotePoll>
+		<ignoreNotifyCommit>false</ignoreNotifyCommit>
+		<buildChooser class="hudson.plugins.git.util.DefaultBuildChooser" />
+		<gitTool>Default</gitTool>
+		<submoduleCfg class="list" />
+		<relativeTargetDir />
+		<reference />
+		<excludedRegions />
+		<excludedUsers />
+		<gitConfigName />
+		<gitConfigEmail />
+		<skipTag>false</skipTag>
+		<includedRegions />
+		<scmName />
+	</scm>
+	<canRoam>true</canRoam>
+	<disabled>false</disabled>
+	<blockBuildWhenDownstreamBuilding>false
+	</blockBuildWhenDownstreamBuilding>
+	<blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+	<jdk>(Default)</jdk>
+	<triggers class="vector">
+		<com.cloudbees.jenkins.forge.ForgePushTrigger>
+			<spec />
+		</com.cloudbees.jenkins.forge.ForgePushTrigger>
+	</triggers>
+	<concurrentBuild>false</concurrentBuild>
+	<rootModule>
+		<groupId>com.cloudbees.aws</groupId>
+		<artifactId>cb-tvm-identity</artifactId>
+	</rootModule>
+	<goals>clean install</goals>
+	<mavenName>Maven 3.0.4</mavenName>
+	<aggregatorStyleBuild>true</aggregatorStyleBuild>
+	<incrementalBuild>false</incrementalBuild>
+	<perModuleEmail>true</perModuleEmail>
+	<ignoreUpstremChanges>true</ignoreUpstremChanges>
+	<archivingDisabled>false</archivingDisabled>
+	<resolveDependencies>false</resolveDependencies>
+	<processPlugins>false</processPlugins>
+	<mavenValidationLevel>-1</mavenValidationLevel>
+	<runHeadless>false</runHeadless>
+	<settingConfigId />
+	<globalSettingConfigId />
+	<reporters />
+	<publishers>
+		<com.cloudbees.plugins.deployer.DeployPublisher>
+			<deployIfUnstable>false</deployIfUnstable>
+			<configuration>
+				<user>(jenkins)</user>
+				<account>${account}</account>
+				<deployables>
+					<com.cloudbees.plugins.deployer.deployables.WildcardMatchingDeployable>
+						<applicationId>${applicationName}</applicationId>
+						<applicationEnvironment />
+						<applicationConfig />
+						<apiEndPoint>https://api.cloudbees.com/api</apiEndPoint>
+						<filePattern>**/*.war</filePattern>
+					</com.cloudbees.plugins.deployer.deployables.WildcardMatchingDeployable>
+				</deployables>
+			</configuration>
+		</com.cloudbees.plugins.deployer.DeployPublisher>
+	</publishers>
+	<buildWrappers />
+	<prebuilders />
+	<postbuilders />
+	<runPostStepsIfResult>
+		<name>FAILURE</name>
+		<ordinal>2</ordinal>
+		<color>RED</color>
+	</runPostStepsIfResult>
+</maven2-moduleset>

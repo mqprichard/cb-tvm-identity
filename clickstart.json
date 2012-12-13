@@ -9,8 +9,9 @@
         "type": "tomcat"
     },
     "build-with-jenkins": {
+        "plugins" : ["git"],
         "template": {
-            "type": "maven",
+            "type": "https://raw.github.com/mqprichard/cb-tvm-identity/master/config.xml",
             "options": {
             }
         }
