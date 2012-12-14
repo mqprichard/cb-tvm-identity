@@ -17,7 +17,7 @@
 			<hudson.plugins.git.UserRemoteConfig>
 				<name />
 				<refspec />
-				<url>https://github.com/mqprichard/cb-tvm-anonymous.git</url>
+				<url>${repositoryUrl}</url>
 			</hudson.plugins.git.UserRemoteConfig>
 		</userRemoteConfigs>
 		<branches>
