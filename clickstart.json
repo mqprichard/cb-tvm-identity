@@ -1,6 +1,6 @@
 {
     "id": "cb-tvm-identity",
-    "name": "AWS Identity Token Vending Machine (TVM)",
+    "name": "Identity Token Vending Machine",
     "source": "github",
     "description" : "The Amazon Web Services Identity Token Vending Machine (TVM) sample application for the CloudBees PaaS",
     "doc-url" : "https://github.com/mqprichard/cb-tvm-identity/blob/master/README.md",
