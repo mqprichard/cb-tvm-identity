@@ -78,7 +78,24 @@
 	<settingConfigId />
 	<globalSettingConfigId />
 	<reporters />
-	<publishers />
+	<publishers>
+		<com.cloudbees.plugins.deployer.DeployPublisher>
+			<deployIfUnstable>false</deployIfUnstable>
+			<configuration>
+				<user>(jenkins)</user>
+				<account>${account}</account>
+				<deployables>
+					<com.cloudbees.plugins.deployer.deployables.WildcardMatchingDeployable>
+						<applicationId>${applicationName}</applicationId>
+						<applicationEnvironment />
+						<applicationConfig />
+						<apiEndPoint>https://api.cloudbees.com/api</apiEndPoint>
+						<filePattern>**/*.war</filePattern>
+					</com.cloudbees.plugins.deployer.deployables.WildcardMatchingDeployable>
+				</deployables>
+			</configuration>
+		</com.cloudbees.plugins.deployer.DeployPublisher>
+	</publishers>
 	<buildWrappers />
 	<prebuilders />
 	<postbuilders />
