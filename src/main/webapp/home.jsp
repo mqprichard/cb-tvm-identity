@@ -41,7 +41,8 @@
 		</div>
 		
 		<% if( Utilities.isEmpty(Configuration.AWS_ACCESS_KEY_ID) || Utilities.isEmpty(Configuration.AWS_SECRET_KEY) ) {%>
-		<p class="warning">Warning: Your Token Vending Machine is not properly configured.</p>
+		<p class="warning">Warning: Your Token Vending Machine is not properly configured. 
+						   See this <a href="http://blog.cloudbees.com/2012/12/amazon-web-services-and-platform-as_12.html">CloudBees blog</a> for details.</p>
 		<%} %>
 		
 		<%
